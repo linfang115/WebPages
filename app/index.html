@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>建讯互联信息管理系统</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <!--可以在收藏夹中显示出图标-->
+  <link rel="Bookmark" href="../images/favicon.ico" type="image/x-icon"/>
+  <!--可以在地址栏中显示出图标-->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="../images/favicon.ico" type="image/x-icon"/>
+
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="style/css/public.css"/>
+  <link rel="stylesheet" href="style/css/style.css"/>
+  <link rel="stylesheet" href="style/iconfont/iconfont.css">
+
+  <script src="scripts/jquery/jquery-2.2.3.min.js"></script>
+  <!--Bootstrap v3.3.6-->
+  <link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.min.css"/> 
+  <script src="scripts/bootstrap/js/bootstrap.min.js"></script>  
+
+</head>
+<body role="document" cz-shortcut-listen="true" class="hold-transition  sidebar-mini skin-fsgreen"  toggle-class="classname">
+
+<!-- wrapper start -->
+<div class="wrapper" > 
+  <!-- header start -->
+  <header class="header" role="navigation">
+    <div class="navbar-inner  clearfix">
+      <a class="navbar-brand logo" href="#"><img src="../images/logo.png" alt="logo" /></a>
+      <a  class="menu-toggler collapsed"  href="javascript:void(0);"><i class="iconfont icon-caidan"></i></a>   
+      <!-- user -->
+      <div id="navbar" class="float_r">
+        <ul class="navbar-user">
+          <li class="user dropdown">             
+            <a href="javascript:void(0);" class="user_box dropdown-toggle" data-toggle="dropdown"><img src="../images/user.jpg" alt="头像" /><span class="user_name">admin</span><i class="iconfont icon-arrow-down"></i></a>
+            <ul class="dropdown-menu memu-list pull-right">
+              <li class="map_personal"><a href="javascript:void(0);" class="btn_edit"><i class="iconfont icon-icon-geren"></i><span>个人信息</span></a></li>
+              <li class="map_password"><a href="javascript:void(0);" class="btn_edit"><i class="iconfont icon-icon-mima"></i><span>修改密码</span></a></li>
+              <li><a href="javascript:void(0);"><i class="iconfont icon-shoucang1"></i><span>我的收藏</span></a></li>
+              <li><a href="javascript:void(0);"><i class="iconfont icon-ttpodicon"></i><span>退出系统</span></a></li>               
+            </ul>              
+          </li>
+          <li class="user_info dropdown">
+            <a href="javascript:void(0);" title="消息" class="icon-msg dropdown-toggle" data-toggle="dropdown" ><i class="iconfont icon-xiaoxi"></i><span class="icon-msg-count">2</span></a>
+            <ul class="dropdown-menu memu-list pull-right">
+              <li class="map_personal"><a href="javascript:void(0);" class="btn_edit"><i class="iconfont icon-xiaoxi"></i><span>即时通讯</span></a></li>
+              <li class="map_password"><a href="javascript:void(0);" class="btn_edit"><i class="iconfont icon-commenting-o"></i><span>系统消息</span></a></li>               
+            </ul>  
+          </li>
+          <li class="user_info pr10 "><a href="javascript:void(0);" title="换肤"  id="control-sidebar-skin"><i class="iconfont icon-icon-huanfu"></i></a></li> 
+        </ul>
+      </div>
+      <!-- bigmenu 一级菜单-->
+      <div id="navbar-collapse" class="navbar-collapse">
+        <ul class="nav navbar-nav bigmenu" >
+          <li class="active"><a href="#!/welcomeHome"><i class="iconfont icon-xiangmuguanli"></i><h1>项目管理</h1></a></li>
+          <li><a href="#!/traffic"><i class="iconfont icon-zuzhiguanli"></i><h1>组织管理</h1></a></li>
+          <li><a href="#!/cater"><i class="iconfont icon-rili"></i><h1>施工日志</h1></a></li>
+          <li><a href="#!/entertainment"><i class="iconfont icon-wenjianguanli"></i><h1>文库管理</h1></a></li>
+          <li><a href="#!/culture"><i class="iconfont icon-sanjijiaoyu"></i><h1>三级教育</h1></a></li>
+          <li><a href="#!/culture"><i class="iconfont icon-xitongshezhi"></i><h1>系统管理</h1></a></li>          
+        </ul>
+      </div>      
+    </div>
+  </header>
+  <!-- header end -->
+  <!-- main start -->
+  <div class="main">
+    <div ng-view></div>
+
+  </div>
+   <!-- main end -->
+</div><!-- wrapper end -->
+
+
+<!-- Control Sidebar 换肤弹窗-->
+<aside class="control-sidebar control-sidebar-dark">
+  <div class="tab-content">
+    <div class="tab-pane" id="control-sidebar-home-tab"></div>
+  </div>
+</aside>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+
+  <!-- showPages -->
+  <script src="container/traffic/traffic.js"></script>
+  <script src="container/cater/cater.js"></script>
+  <script src="container/login/login.js"></script>
+  <script src="container/register/register.js"></script>
+  <script src="container/collection/collection.js"></script>
+  <script src="container/traffic/flight/flight.js"></script>
+  <script src="container/cater/chinese/chinese.js"></script>
+  <script src="container/cater/foreign/foreign.js"></script>
+  <script src="container/welcomeHome/welcomeHome.js"></script>
+
+  <!-- showAndroidVersion -->
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
